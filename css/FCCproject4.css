@@ -1,0 +1,155 @@
+:root {
+  --lightblue-hover: #58B0DDff;
+  --blue-telegram: #0088CC;
+  --darkgray-main: #333333;
+
+  --red-main: #C61717;
+  --red-bg: #FEEAE4;
+
+  --gray-code: #546172;
+  --gray-bg: #ECF3F8;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Source Sans Pro', 'Helvetica Neu', Arial, sans-serif;
+  font-size: 16px;
+  color: var(--darkgray-main);
+  line-height: 1.35rem;
+}
+
+body {
+  display: flex;
+}
+
+.container-right {
+  background: white;
+  width: 80%;
+  padding: 3rem;
+}
+
+.content-section {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1.5rem;
+  margin-left: 0.8rem;
+}
+
+.content-sub-section {
+  margin-top: 0.7rem;
+  margin-right: 3.2rem;
+  margin-bottom: 1.5rem;
+  margin-left: 2.2rem;
+}
+
+header{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding-left: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+strong {
+  color: var(--blue-telegram);
+  font-weight: 600;
+}
+
+ul {
+  padding-top: 0.7rem;
+  padding-left: 2.5rem;
+  line-height: 1.5rem;
+}
+
+li {
+  color: var(--blue-telegram);
+}
+
+blockquote {
+  margin: 0.6rem 0 1rem 0;
+  padding: 0.25rem 0 0.5rem 1rem;
+  border-left: 5px solid var(--blue-telegram);
+}
+
+#Bot_API blockquote:hover {
+  text-decoration: underline;
+}
+
+.link {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--blue-telegram);
+}
+
+.hover:hover {
+  color: var(--lightblue-hover);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin-bottom: 1rem;
+}
+
+#sendcode, #methods {
+  border-collapse: collapse;
+  text-align: left;
+  width: 100%;
+  margin: 1.25rem 0;
+}
+
+#sendcode td, #methods td{
+  border-top: 1px solid #eee;
+  padding: 0.5rem 3rem 0.5rem 0.5rem;
+}
+
+#methods th {
+  border-bottom: 2px solid #eee;
+  padding: 0.5rem 3rem 0.5rem 0.5rem;
+}
+
+
+code {
+  font-family: 'Roboto Mono';
+  font-size: smaller;
+  color: var(--gray-code);
+}
+
+pre {
+  display: block;
+  padding: 0.5rem 0 0rem 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.red {
+  font-size: smaller;
+  background: var(--red-bg);
+  color: var(--red-main);
+  padding: 0 0.25rem;
+}
+
+.gray {
+  background: var(--gray-bg);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.container-left {
+  background: papayawhip;
+  width: 20%;
+  border-right: 3px solid gray;
+}
+
+h1 {
+
+}
