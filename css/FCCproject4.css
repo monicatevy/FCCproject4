@@ -24,10 +24,60 @@ body {
   display: flex;
 }
 
+.container-left {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  border-right: 0.15rem solid #ddd;
+  position: fixed;
+}
+
+#navbar {
+  height: 100vh;
+}
+
+#header-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem 0;
+  border-bottom: 0.1rem solid #ddd;
+  font-size: 1.2rem;
+}
+
+#header-img {
+  width: 25px;
+  margin: 0.2rem 0.5rem 0 0.5rem;
+}
+
+.container-nav-link, .container-nav-link-sub {
+  padding: 0.9rem 1rem 0.9rem 2.5rem;
+  border-bottom: 0.1rem solid #eee;
+}
+
+.container-nav-link-sub {
+  padding: 0.5rem 1rem 0.5rem 3.5rem;
+}
+
+#navbar :nth-child(4),
+#navbar :nth-child(8),
+#navbar :nth-child(12),
+#navbar :nth-child(15) {
+  padding-bottom: 0.7rem;
+}
+
+#navbar :last-child {
+  border: none;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
 .container-right {
-  background: white;
   width: 80%;
   padding: 3rem;
+  margin-left: 20%;
 }
 
 .content-section {
@@ -144,12 +194,12 @@ pre {
   font-weight: bold;
 }
 
-.container-left {
-  background: papayawhip;
-  width: 20%;
-  border-right: 3px solid gray;
-}
-
-h1 {
-
+footer {
+  font-family: 'Roboto Mono';
+  font-weight: lighter;
+  font-size: smaller;
+  text-decoration: none;
+  color: #B8BDC4;
+  text-align: right;
+  margin-bottom: -2rem;
 }

@@ -24,7 +24,77 @@
   </head>
   <body>
     <div class="container-left">
-      <h1>Telegram APIs</h1>
+      <nav id="navbar">
+        <header id="header-logo">
+          <img id="header-img" src="images/telegram-logo.png" alt="Telegram logo">
+          Telegram APIs
+        </header>
+
+        <div class="container-nav-link">
+          <a class="nav-link" href="#Introduction">Introduction</a>
+        </div>
+
+        <div class="container-nav-link">
+          <a class="nav-link" href="#Bot_API">Bot API</a>
+        </div>
+
+        <div class="container-nav-link">
+          <a class="nav-link" href="#Create_your_Telegram_Application">Create your Telegram Application</a>
+        </div>
+
+            <div class="container-nav-link-sub">
+              <a class="nav-link" href="#Obtaining_api_id">Obtaining api_id</a>
+            </div>
+
+            <div class="container-nav-link-sub">
+              <a class="nav-link" href="#Using_the_api_id">Using the api_id</a>
+            </div>
+
+            <div class="container-nav-link-sub">
+              <a class="nav-link" href="#Using_Telegram's_open_source_code">Using Telegram's open source code</a>
+            </div>
+
+        <div class="container-nav-link">
+          <a class="nav-link" href="#User_authorization">User authorization</a>
+        </div>
+
+            <div class="container-nav-link-sub">
+              <a class="nav-link" href="#Sending_a_verification_code">Sending a verification code</a>
+            </div>
+
+            <div class="container-nav-link-sub">
+              <a class="nav-link" href="#Sign_in/sign_up">Sign in/sign up</a>
+            </div>
+
+        <div class="container-nav-link">
+          <a class="nav-link" href="#Error_handling">Error handling</a>
+        </div>
+
+        <div class="container-nav-link">
+          <a class="nav-link" href="#API_method_listmethod_list">API method list</a>
+        </div>
+
+            <div class="container-nav-link-sub">
+              <a class="nav-link" href="#Accepting_the_Terms_of_Service">Accepting the Terms of Service</a>
+            </div>
+
+            <div class="container-nav-link-sub">
+              <a class="nav-link" href="#Dealing_with_spam_and_ToS_violations">Dealing with spam and ToS violations</a>
+            </div>
+
+        <div class="container-nav-link">
+          <a class="nav-link" href="#Commands">Commands</a>
+        </div>
+
+            <div class="container-nav-link-sub">
+              <a class="nav-link" href="#Getting_commands">Getting commands</a>
+            </div>
+
+            <div class="container-nav-link-sub">
+              <a class="nav-link" href="#Setting_commands">Setting commands</a>
+            </div>
+
+      </nav>
 
     </div>
 
@@ -66,7 +136,7 @@
             <blockquote>
               In order to ensure consistency and security across the Telegram ecosystem, all third-party client apps must comply with the <strong>API Terms of Service</strong>.
             </blockquote>
-            <h2>Obtaining api_id</h2>
+            <h2 id="Obtaining_api_id">Obtaining api_id</h2>
             <div class="content-sub-section">
               <p>In order to obtain an API id and develop your own application using the Telegram API you need to do the following:</p>
               <ul>
@@ -79,12 +149,12 @@
               </ul>
               <p>We will be sending important developer notifications to the phone number that you use in this process, so please use an up-to-date number connected to your active Telegram account.</p>
             </div>
-            <h2>Using the api_id</h2>
+            <h2 id="Using_the_api_id">Using the api_id</h2>
             <div class="content-sub-section">
               <p>Before using the MTProto Telegram API, please note that all API client libraries are strictly monitored to prevent abuse.<br><br>If you use the Telegram API for flooding, spamming, faking subscriber and view counters of channels, you will be banned forever.<br><br>Due to excessive abuse of the Telegram API, all accounts that sign up or log in using unofficial Telegram API clients are automatically put under observation to avoid violations of the Terms of Service.<br><br>If you didn't violate the Terms of Service but your account does get banned after using the API, write to <a class="link">recover@telegram.org</a> explaining what you intend to do with the API, asking to unban your account.
                 Please note that emails are checked by a human, so automatically generated emails will be detected and banned.</p>
             </div>
-            <h2>Using Telegram's open source code</h2>
+            <h2 id="Using_Telegram's_open_source_code">Using Telegram's open source code</h2>
             <div class="content-sub-section">
               <p>Everyone is welcome to use our open source code. We have included a sample API id with the code. This API id is limited on the server side and is not suitable for apps released to end-users — using it for anything but testing purposes will result in the API_ID_PUBLISHED_FLOOD error for your users. It is necessary that you obtain your own API id before you publish your app.</p>
               <blockquote>
@@ -100,7 +170,7 @@
           <div class="content-section">
             <p>Authorization is associated with a client’s encryption key identifier: auth_key_id. No additional parameters need to be passed into methods following authorization.<br><br>To log in as a <a class="link" target="_blank" href="https://core.telegram.org/bots">bot</a>, follow <a class="link hover" target="_blank" href="https://core.telegram.org/api/bots">these instructions »</a>.</p>
           </div>
-          <h2>Sending a verification code</h2>
+          <h2 id="Sending_a_verification_code">Sending a verification code</h2>
           <div class="content-sub-section">
             <p>Example implementations: telegram for android, tdlib.<br><br>To show a nicely formatted and validated phone number field, the help.countriesList constructor can be obtained using the help.getCountriesList method.<br><br>Authorization requires that a text message containing an authorization code first be sent to the user’s phone.
               This may be done using the auth.sendCode method. The system will automatically choose how to send the authorization code; there are four possible ways the code can arrive:</p>
@@ -140,7 +210,7 @@
               </table>
               <p>If the message takes too long (<code class="code red">timeout</code> seconds) to arrive at the phone, the auth.resendCode method may be invoked to resend a code of type <code class="code red">next_type</code>. If the same happens again, you can use auth.resendCode with the <code class="code red">next_type</code> returned by the previous call to auth.resendCode. To cancel the verification code use auth.cancelCode.</p>
           </div>
-          <h2>Sign in/sign up</h2>
+          <h2 id="Sign_in/sign_up">Sign in/sign up</h2>
           <div class="content-sub-section">
             <p>When user enters verification code, the auth.signIn method must be used to validate it and possibly sign user in.<br><br>If the code was entered correctly, but the method returns auth.authorizationSignUpRequired, it means that account with this phone number doesn't exist yet: user needs to provide basic information, accept terms of service and then the new user registration method (auth.signUp) must be invoked.</p>
           </div>
@@ -219,7 +289,7 @@
         <section class="main-section" id="API_method_list">
           <header>API method list</header>
 
-          <h2>Accepting the Terms of Service</h2>
+          <h2 id="Accepting_the_Terms_of_Service">Accepting the Terms of Service</h2>
           <div class="content-sub-section">
             <table id="methods">
               <tr>
@@ -237,7 +307,7 @@
             </table>
           </div>
 
-          <h2>Dealing with spam and ToS violations</h2>
+          <h2 id="Dealing_with_spam_and_ToS_violations">Dealing with spam and ToS violations</h2>
           <div class="content-sub-section">
             <table id="methods">
               <tr>
@@ -274,7 +344,7 @@
           <div class="content-section">
             <p><a class="link" target="_blank" href="https://core.telegram.org/bots">Bots</a> offer a set of <a class="link" target="_blank" href="https://core.telegram.org/bots/#commands">commands</a> that can be used by users in private, or in a chat.<br><br>For a simplified description using the HTTP bot API, see <a class="link hover" target="_blank" href="https://core.telegram.org/bots/#commands">here »</a>.</p>
           </div>
-          <h2>Getting commands</h2>
+          <h2 id="Getting_commands">Getting commands</h2>
           <div class="content-sub-section">
             <pre class="gray">
               <code>
@@ -290,7 +360,7 @@ user#938458c1 flags:# self:flags.10?true contact:flags.11?true mutual_contact:fl
             </pre>
             <p>The botInfo constructors contained in the userFull, chatFull, channelFull contain a list of commands, and for groups, the ID and a description of each bot.<br><br>In graphical clients, when users begin a message with a <code class="red">/</code>, a list of commands supported by all bots present in the current chat should be shown; the same should be done for one-to-one chats with the bot itself.<br><br>If the command list of a bot changes, the <code class="red">bot_info_version</code> contained in the user constructor received in updates will change; this indicates that the client should refetch full bot information using users.getFullUser.</p>
           </div>
-          <h2>Setting commands</h2>
+          <h2 id="Setting_commands">Setting commands</h2>
           <div class="content-sub-section">
             <pre class="gray">
               <code>
@@ -305,6 +375,7 @@ bots.setBotCommands#805d46f6 commands:Vector&#60;BotCommand&#62; = Bool;
           </div>
           <hr>
         </section>
+        <footer><a href="https://monicatevy.github.io/FCCproject4/">coded by Monica Tevy</a></footer>
       </main>
     </div>
   </body>
